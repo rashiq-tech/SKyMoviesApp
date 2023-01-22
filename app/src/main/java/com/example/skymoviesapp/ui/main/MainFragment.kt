@@ -1,32 +1,45 @@
 package com.example.skymoviesapp.ui.main
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.example.skymoviesapp.R
+import com.example.skymoviesapp.databinding.FragmentMainBinding
+import com.example.skymoviesapp.utils.ApiState
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainFragment : Fragment() {
+@AndroidEntryPoint
+class MainFragment : Fragment(R.layout.fragment_main) {
 
-    companion object {
-        fun newInstance() = MainFragment()
-    }
+    private val viewModel: MainViewModel by viewModels()
+    private lateinit var binding : FragmentMainBinding
 
-    private lateinit var viewModel: MainViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+        binding  = FragmentMainBinding.bind(view)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        viewModel.fetchAllMovies()
+        viewModel.moviesList.observe(requireActivity()) {
+            when (it) {
+                is ApiState.Success -> {
+//                    binding.progress.visibility = View.GONE
+//                    val data = it.data!!.movies
+//                    homeAdapter.submitList(data!!)
+                }
+                is ApiState.Error -> {
+//                    binding.progress.visibility = View.GONE
+//                    it.message?.let { message ->
+//                        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+//                    }
+                }
+                is ApiState.Loading -> {
+//                    binding.progress.visibility = View.VISIBLE
+                }
+            }
+
+        }
     }
 
 }
