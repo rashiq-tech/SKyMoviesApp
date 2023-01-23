@@ -1,13 +1,11 @@
 package com.example.skymoviesapp.feature
 
-import android.content.Context
 import com.example.skymoviesapp.TestCoroutineRule
-import com.example.skymoviesapp.ui.main.HomeRepository
-import com.example.skymoviesapp.ui.main.MainViewModel
+import com.example.skymoviesapp.ui.feature.movies.repository.HomeRepository
+import com.example.skymoviesapp.ui.feature.movies.viewmodel.MainViewModel
 import org.junit.Before
 import org.junit.Rule
 import org.mockito.Mock
-import org.mockito.Mockito.mock
 import org.mockito.MockitoAnnotations
 
 class MainViewModelTest {
@@ -16,15 +14,13 @@ class MainViewModelTest {
     val testCoroutineRule = TestCoroutineRule()
 
     @Mock
-    lateinit var mockNewsRepository: HomeRepository
+    lateinit var mockMoviesRepository: HomeRepository
     private lateinit var testSut: MainViewModel
-
-    val context: Context = mock(Context::class.java)
 
     @Before
     fun setUp() {
         MockitoAnnotations.openMocks(this)
-        testSut = MainViewModel(mockNewsRepository, context)
+        testSut = MainViewModel(mockMoviesRepository)
     }
 
 }

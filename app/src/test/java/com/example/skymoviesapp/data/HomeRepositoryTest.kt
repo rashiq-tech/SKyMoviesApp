@@ -1,8 +1,8 @@
 package com.example.skymoviesapp.data
 
 import com.example.skymoviesapp.TestCoroutineRule
-import com.example.skymoviesapp.ui.main.HomeApiService
-import com.example.skymoviesapp.ui.main.HomeRepository
+import com.example.skymoviesapp.data.feature.movies.HomeApiService
+import com.example.skymoviesapp.ui.feature.movies.repository.HomeRepository
 import org.junit.Before
 import org.junit.Rule
 import org.mockito.Mock

@@ -1,6 +1,6 @@
-package com.example.skymoviesapp.ui.main
+package com.example.skymoviesapp.data.feature.movies
 
-import com.example.skymoviesapp.data.Movies
+import com.example.skymoviesapp.data.models.Movies
 import retrofit2.Response
 import retrofit2.http.GET
 

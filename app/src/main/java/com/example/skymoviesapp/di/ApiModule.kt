@@ -2,7 +2,7 @@ package com.example.skymoviesapp.di
 
 import android.content.Context
 import com.example.skymoviesapp.SkyMoviesApp
-import com.example.skymoviesapp.ui.main.HomeApiService
+import com.example.skymoviesapp.data.feature.movies.HomeApiService
 import com.example.skymoviesapp.utils.hasInternetConnection
 import dagger.Module
 import dagger.Provides

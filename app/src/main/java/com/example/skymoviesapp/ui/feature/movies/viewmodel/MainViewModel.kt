@@ -1,10 +1,11 @@
-package com.example.skymoviesapp.ui.main
+package com.example.skymoviesapp.ui.feature.movies.viewmodel
 
 import android.accounts.NetworkErrorException
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.skymoviesapp.data.Movies
+import com.example.skymoviesapp.data.models.Movies
+import com.example.skymoviesapp.ui.feature.movies.repository.HomeRepository
 import com.example.skymoviesapp.utils.ApiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -13,7 +14,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val homeRepository: HomeRepository) : ViewModel() {
+    private val homeRepository: HomeRepository
+) : ViewModel() {
 
     val moviesList: MutableLiveData<ApiState<List<Movies>>> = MutableLiveData()
 

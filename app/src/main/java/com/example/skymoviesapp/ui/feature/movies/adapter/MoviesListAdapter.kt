@@ -1,4 +1,4 @@
-package com.example.skymoviesapp.ui.main
+package com.example.skymoviesapp.ui.feature.movies.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.skymoviesapp.R
-import com.example.skymoviesapp.data.Movies
+import com.example.skymoviesapp.data.models.Movies
 import com.example.skymoviesapp.databinding.RowItemMoviesBinding
 
 
@@ -20,7 +20,7 @@ class MoviesListAdapter ():
     }
 
     override fun onBindViewHolder(
-        holder:NewsFeedViewHolder,
+        holder: NewsFeedViewHolder,
         position: Int
     ) {
         val currentItem = getItem(position)

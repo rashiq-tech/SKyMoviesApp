@@ -1,7 +1,7 @@
-package com.example.skymoviesapp.ui.main
+package com.example.skymoviesapp.ui.feature.movies.repository
 
-import com.example.skymoviesapp.data.Movies
-import com.example.skymoviesapp.data.MoviesResponseDTO
+import com.example.skymoviesapp.data.models.Movies
+import com.example.skymoviesapp.data.feature.movies.HomeApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response

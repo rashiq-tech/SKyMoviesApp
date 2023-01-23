@@ -1,4 +1,4 @@
-package com.example.skymoviesapp.ui.main
+package com.example.skymoviesapp.ui.feature.movies
 
 import android.content.res.Configuration
 import android.graphics.Rect
@@ -14,8 +14,10 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skymoviesapp.R
-import com.example.skymoviesapp.data.Movies
+import com.example.skymoviesapp.data.models.Movies
 import com.example.skymoviesapp.databinding.FragmentMainBinding
+import com.example.skymoviesapp.ui.feature.movies.adapter.MoviesListAdapter
+import com.example.skymoviesapp.ui.feature.movies.viewmodel.MainViewModel
 import com.example.skymoviesapp.utils.ApiState
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*

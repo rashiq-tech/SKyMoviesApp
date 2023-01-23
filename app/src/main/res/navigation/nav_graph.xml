@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.skymoviesapp.ui.main.MainFragment"
+        android:name="com.example.skymoviesapp.ui.feature.movies.MainFragment"
         android:label="Movies List"
         tools:layout="@layout/fragment_main" />
 
