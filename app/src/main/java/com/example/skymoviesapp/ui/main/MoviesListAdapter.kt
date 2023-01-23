@@ -49,6 +49,7 @@ class MoviesListAdapter ():
                 Glide.with(itemView)
                     .load(article.poster)
                     .error(R.drawable.placeholder)
+                    .placeholder(R.drawable.placeholder)
                     .into(ivMovies)
                 tvGenre.text = article.genre ?: ""
             }

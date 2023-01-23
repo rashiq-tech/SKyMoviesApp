@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SKyMoviesApp</string>
+    <string name="api_state_loading">Loading data....</string>
 </resources>
