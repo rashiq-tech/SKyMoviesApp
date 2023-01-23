@@ -37,6 +37,12 @@ android {
         viewBinding true
         dataBinding true
     }
+    lint {
+        lintConfig = file("$rootDir/android-lint.xml")
+        abortOnError = false
+        sarifReport = true
+        checkDependencies = true
+    }
 }
 
 dependencies {
