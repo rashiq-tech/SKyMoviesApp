@@ -24,7 +24,7 @@ class MainViewModelTest {
     @Before
     fun setUp() {
         MockitoAnnotations.openMocks(this)
-        testSut = MainViewModel(mockNewsRepository, context)
+        testSut = MainViewModel(mockNewsRepository)
     }
 
 }
