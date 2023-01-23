@@ -1,7 +1,7 @@
 package com.example.skymoviesapp.di
 
 import com.example.skymoviesapp.SkyMoviesApp
-import com.example.skymoviesapp.data.HomeApiService
+import com.example.skymoviesapp.ui.main.HomeApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

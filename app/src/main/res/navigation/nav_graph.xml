@@ -5,9 +5,11 @@
     android:id="@+id/nav_graph"
     android:label="movies_graph"
     app:startDestination="@id/mainFragment">
+
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.skymoviesapp.ui.main.MainFragment"
-        android:label="mainFragment"
+        android:label="Movies List"
         tools:layout="@layout/fragment_main" />
+
 </navigation>

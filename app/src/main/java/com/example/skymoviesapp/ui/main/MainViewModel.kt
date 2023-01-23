@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.skymoviesapp.data.Movies
+import com.example.skymoviesapp.data.MoviesResponseDTO
 import com.example.skymoviesapp.utils.ApiState
 import com.example.skymoviesapp.utils.hasInternetConnection
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +20,7 @@ class MainViewModel @Inject constructor(
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
-    val moviesList: MutableLiveData<ApiState<Movies>> = MutableLiveData()
+    val moviesList: MutableLiveData<ApiState<List<Movies>>> = MutableLiveData()
 
     fun fetchAllMovies() {
         moviesList.postValue(ApiState.Loading())
